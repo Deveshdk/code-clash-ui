@@ -10,17 +10,25 @@ export const Login = styled('h1')(({theme}) => ({
 }));
 
 export const LoginGrid = styled(Grid)(({theme}) => ({
-    marginTop: '10rem',
+    marginTop: '4rem',
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "right",
+    marginRight: '2rem'
 }));
 
 export const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: theme.palette.secondary.main,
+  backgroundColor: "#ed7979ff",
   color: "#fff",
-  padding: theme.spacing(1.5, 4),
+  padding: theme.spacing(1.5, 2),
   fontWeight: "bold",
   "&:hover": {
-    backgroundColor: theme.palette.secondary.dark,
+    backgroundColor: "#622d2dff",
   },
+}));
+
+export const LoginModalGrid = styled(Grid)(({theme}) => ({
+    marginTop: '4rem',
+    display: "flex",
+    justifyContent: "center",
+    marginRight: '2rem'
 }));
