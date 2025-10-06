@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { LoginGrid, LoginModalGrid, StyledButton } from "../styles/LoginStyle";
-import { LOGIN_BUTTON } from "../constants/CodeClashLoginConstants";
+import { LoginBox, LoginGrid, LoginModalGrid, StyledButton } from "../styles/LoginStyle";
+import { LOGIN_BUTTON, REGISTER_USER } from "../constants/CodeClashLoginConstants";
 import LoginIcon from "@mui/icons-material/Login";
 import { LoginModal } from "../components";
 
@@ -15,8 +15,11 @@ export const Login: React.FC = () => {
 
     return (
         <LoginGrid>
-            <StyledButton onClick={()=> setIsLogInModalOpen(true)}><LoginIcon sx={{ mr: 1 }}/>{LOGIN_BUTTON}</StyledButton>
-            <LoginModal isModalOpen={isLogInModalOpen} onClose={handleOnClose}/>
+            <LoginBox>
+                <StyledButton onClick={()=> setIsLogInModalOpen(true)}><LoginIcon sx={{ mr: 1 }}/>{LOGIN_BUTTON}</StyledButton>
+                <StyledButton onClick={()=> setIsLogInModalOpen(true)}><LoginIcon sx={{ mr: 1 }}/>{REGISTER_USER}</StyledButton>
+                <LoginModal isModalOpen={isLogInModalOpen} onClose={handleOnClose} />
+            </LoginBox>
         </LoginGrid>
     );
 };

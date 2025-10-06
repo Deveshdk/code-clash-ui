@@ -8,9 +8,9 @@ import {
   Button,
   Typography
 } from '@mui/material';
-import { ILoginModalProps } from '../interfaces';
+import { IUserModalProps } from '../interfaces';
 
-export const LoginModal : React.FC<ILoginModalProps> = ({isModalOpen, onClose}) => {
+export const LoginModal : React.FC<IUserModalProps> = ({isModalOpen, onClose}) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 

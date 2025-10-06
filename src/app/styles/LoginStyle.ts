@@ -1,4 +1,4 @@
-import { Button, Grid } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const Login = styled('h1')(({theme}) => ({
@@ -10,10 +10,20 @@ export const Login = styled('h1')(({theme}) => ({
 }));
 
 export const LoginGrid = styled(Grid)(({theme}) => ({
-    marginTop: '4rem',
-    display: "flex",
-    justifyContent: "right",
-    marginRight: '2rem'
+    minHeight: '100vh',
+    backgroundColor: 'grey.50',   // bg-gray-50 (MUI theme color)
+    display: 'flex',              // flex
+    alignItems: 'center',         // items-center
+    justifyContent: 'center',     // justify-center
+    px: 4,                        // px-4 (theme.spacing(4) = 32px by default)
+    py: 8,                        // py-8
+}));
+
+export const LoginBox = styled(Box)(() => ({
+  width: '100%',
+  maxWidth: '24rem',
+  marginLeft: 'auto',
+  marginRight: 'auto'
 }));
 
 export const StyledButton = styled(Button)(({ theme }) => ({
@@ -24,6 +34,8 @@ export const StyledButton = styled(Button)(({ theme }) => ({
   "&:hover": {
     backgroundColor: "#622d2dff",
   },
+  paddingRight: "1rem",
+  display: "flex"
 }));
 
 export const LoginModalGrid = styled(Grid)(({theme}) => ({

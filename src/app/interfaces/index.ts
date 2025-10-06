@@ -1,1 +1,1 @@
-export * from './ILoginModalProps';
+export * from './IUserModalProps';
